@@ -1,0 +1,49 @@
+{
+  "name": "EXLcode Online IDE",
+  "version": "0.1.1",
+  "manifest_version": 2,
+  "description": "EXLcode Online IDE Extension by EXL Inc.",
+  "homepage_url": "https://exlcode.com/",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "page": "src/bg/background.html",
+    "persistent": true
+  },
+  "browser_action": {
+    "default_icon": "icons/icon19.png",
+    "default_title": "EXLcode Online IDE",
+    "default_popup": "src/browser_action/app/build/index.html"
+  },
+  "permissions": [
+    "https://github.com/*",
+    "https://gitlab.com/*",
+    "https://bitbucket.org/*",
+    "https://*.visualstudio.com/*",
+    "tabs",
+    "webNavigation"
+  ],
+  "content_scripts": [{
+      "matches": [
+        "https://github.com/*"
+      ],
+      "css": [
+        "src/inject/inject.css"
+      ]
+    },
+    {
+      "matches": [
+        "https://github.com/*"
+      ],
+      "js": [
+        "js/jquery/jquery.min.js",
+        "js/exlcode.js",
+        "src/inject/inject.js"
+      ]
+    }
+  ]
+}
