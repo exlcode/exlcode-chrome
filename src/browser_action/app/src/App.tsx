@@ -62,12 +62,14 @@ class App extends React.Component {
   }
 
   private handleStarMeOnGH = () => {
+    this.sendAnalyticsEvent("star-me-on-github-clicked");
     chrome.tabs.create({
       url: "https://github.com/exlcode/exlcode-chrome"
     });
   };
 
   private handleSendFeedback = () => {
+    this.sendAnalyticsEvent("send-feedback-clicked");
     chrome.tabs.create({
       url:
         "https://github.com/exlcode/exlcode-chrome/issues/new?labels=feedback"
@@ -75,7 +77,12 @@ class App extends React.Component {
   };
 
   private handleOpenIDE = () => {
+    this.sendAnalyticsEvent("open-ide");
     chrome.tabs.create({ url: "https://exlcode.com/ide" });
+  };
+
+  private sendAnalyticsEvent = (action: string) => {
+    _gaq.push(["_trackEvent", "browser-action", action]);
   };
 }
 
