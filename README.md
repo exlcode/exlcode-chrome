@@ -2,7 +2,7 @@
 
 This extension provides a seamless user experience for EXLcode and Chrome browser users.
 
-It can be found in the Chrome Web Store at TODO
+It can be found in the Chrome Web Store [here](https://chrome.google.com/webstore/detail/exlcode-vs-code-based-onl/elcfpiphmolcddmecegalaikjiclhdjc?hl=en)
 
 ## Feedback
 
