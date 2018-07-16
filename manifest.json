@@ -1,8 +1,8 @@
 {
-  "name": "EXLcode Online IDE",
+  "name": "EXLcode - VS Code-based Online IDE",
   "version": "0.1.1",
   "manifest_version": 2,
-  "description": "EXLcode Online IDE Extension by EXL Inc.",
+  "description": "Supercharge your development experience with the professional EXLcode cloud IDE, GitHub integration, and Chrome extension!",
   "homepage_url": "https://exlcode.com/",
   "content_security_policy": "script-src 'self' https://www.google-analytics.com https://ssl.google-analytics.com https://google-analytics.com; object-src 'self'",
   "icons": {
