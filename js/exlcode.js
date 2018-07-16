@@ -44,6 +44,9 @@ function cleanRepoValue() {
 
 function loadDesktopRepoBtn() {
     desktopBtn.attr("href", exlcodeOpenUrl());
+    desktopBtn.click(function (e) {
+        trackEvent("clicked-edit-btn");
+    });
     switch (getDesktopRepoPageType()) {
         case "":
             break;
