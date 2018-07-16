@@ -24,6 +24,6 @@ All code for the popup or, "Browser Action" as it's formally known, is in the `s
 
 2.  Once the browser action has been built, temporarily delete the `src/browser_action/app/node_modules` directory to decrease the size of the extension
 
-3.  Export the directory as a ZIP and continue the process following the Chrome Web Store guidlines.
+3.  Export the directory as a ZIP (i.e., `cd .. && zip -r exlcode-chrome.zip exlcode-chrome`) and continue the process following the Chrome Web Store guidlines.
 
 4.  After the extension has been packaged, in order to continue development, restore your `src/browser_action/app/node_modules` directory by running the `yarn install` command as outlined in the Develeper Setup section above.
